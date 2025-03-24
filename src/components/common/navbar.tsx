@@ -1,6 +1,6 @@
 "use client";
 
-import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
+// import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-4">
+        {/* <div className="hidden md:flex space-x-4">
           <SignedOut>
             <Link href="/signin">
               <Button variant="outline">Sign In</Button>
@@ -35,16 +35,16 @@ export default function Navbar() {
             </Link>
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+        {/* <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           <Menu className="w-6 h-6 text-gray-700 dark:text-white" />
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="md:hidden bg-white dark:bg-gray-800 p-4">
           <SignedOut>
             <Link href="/signin" className="block py-2">Sign In</Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
         </div>
-      )}
+      )} */}
     </nav>
   );
 }
